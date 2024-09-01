@@ -1,68 +1,128 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colors */
+  --primary-color:#5E56E7 !important;
+  --secondary-color: #f8f7ff;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Greys */
+  --grey-light: #f0f0f6;
+  --grey-medium: #a0a0a0;
+  --grey-dark: #333333;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* Fonts */
+  --font-family: "Montserrat", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 600;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
 }
 
+/* Typography */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: 48px;
+  color: var(--primary-color);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: 30px;
+  color: var(--grey-dark);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.genre-card {
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+  display: flex;
+  justify-content: center;
 }
+
+.genre-card-body {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.genre-icon {
+  margin-right: 15px; /* Adjust the margin as needed */
+  width: 30px; /* Set a fixed width for the icon */
+  height: 30px; /* Set a fixed height for the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the image fits within the div */
+}
+
+.genre-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600; /* Semi Bold */
+  color: #333333; /* Dark Grey for text */
+}
+
+.genre-arrow {
+  color: #5e56e7; /* Primary color */
+  font-size: 1.5rem; /* Adjust the size as needed */
+}
+
+
+
+.search-box {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  color: var(--grey-dark);
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 40px;
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey-medium);
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+
+
+.rectangle {
+  width: 114px;
+  height: 162px;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+  padding: 0;
+  margin: 0;
+ 
+}
+
+.book-cover {
+  width: 100%;
+  height: 162px; /* Set a fixed height */
+  border-radius: 8px !important;
+  overflow: hidden;
+  object-fit: cover; /* Cover the container */
+}
+
+.book-title {
+  font-size: 12px; /* Adjust font size as needed */
+  color: black;
+}
+
+.book-author {
+  font-size: 12px; /* Adjust font size as needed */
+
+}
+
