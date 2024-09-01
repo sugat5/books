@@ -8,7 +8,7 @@ function App({ routes }) {
     <>
       <Routes >
         <Route path="/" element={<LandingPage />} />
-        <Route path="books/:id" element={<BooksListing />} />
+        <Route path="books/:genre" element={<BooksListing />} />
       </Routes>
     </>
   );
